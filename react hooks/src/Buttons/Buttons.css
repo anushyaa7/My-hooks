@@ -1,0 +1,7 @@
+.buttons-container {
+  margin-top: 20px;
+}
+.buttons-container .MuiButton-root {
+  border-radius: 10px; /* Adjust the radius as needed */
+}
+
