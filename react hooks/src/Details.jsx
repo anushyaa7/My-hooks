@@ -21,29 +21,45 @@ const radioOptions = [
 ];
 
 const Details = () => {
-    const [isReset, setIsReset] = useState(true);
-  
-    const handleReset = () => {
-      console.log('Reset clicked');
-      setIsReset(false); 
-    };
-  
-    const handleNext = () => {
-      console.log('Next clicked');
-      setIsReset(true); 
-    };
-  
-    return (
-      <Forms 
-        autocompleteOptions={top100Films}
-        autocompleteLabel="Placeholder"
-        radioOptions={radioOptions}
-        radioLabel="Mandatory"
-        buttonLabel={isReset ? "RESET" : "NEXT"}
-        buttonVariant={isReset ? "outlined" : "contained"}
-        buttonOnClick={isReset ? handleReset : handleNext}
-      />
-    );
+  const handleReset = () => {
+    console.log('Reset clicked');
   };
+
+  const handleSaveDraft = () => {
+    console.log('Save Draft clicked');
+  };
+
+  const handleNext = () => {
+    console.log('Next clicked');
+  };
+
+  const buttons = [
+    {
+      label: 'RESET',
+      variant: 'outlined',
+      onClick: handleReset,
+    },
+    {
+      label: 'SAVE DRAFT',
+      variant: 'outlined',
+      onClick: handleSaveDraft,
+    },
+    {
+      label: 'NEXT',
+      variant: 'contained',
+      onClick: handleNext,
+    },
+  ];
+
+  return (
+    <Forms 
+      autocompleteOptions={top100Films}
+      autocompleteLabel="Placeholder"
+      radioOptions={radioOptions}
+      radioLabel="Mandatory"
+      buttons={buttons}
+    />
+  );
+};
 
 export default Details;

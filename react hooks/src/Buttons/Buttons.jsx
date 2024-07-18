@@ -2,16 +2,20 @@ import React from 'react';
 import { Button, Stack } from '@mui/material';
 import './Buttons.css';
 
-const Buttons = ({ label, variant, onClick }) => {
+const Buttons = ({ buttons }) => {
   return (
     <div className="buttons-container">
       <Stack direction="row" spacing={2}>
-        <Button
-          variant={variant}
-          onClick={onClick}
-        >
-          {label}
-        </Button>
+        {buttons.map((button, index) => (
+          <Button 
+            key={index}
+            variant={button.variant}
+            endIcon={button.icon}
+            onClick={button.onClick}
+          >
+            {button.label}
+          </Button>
+        ))}
       </Stack>
     </div>
   );

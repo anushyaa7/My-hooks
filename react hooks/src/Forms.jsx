@@ -8,22 +8,17 @@ import Buttons from './Buttons/Buttons';
 import RadioOptions from './RadioOptions/RadioOptions';
 import AutocompleteComp from './Autocomplete/AutocompleteComp';
 
-
-const Forms = ({ autocompleteOptions, autocompleteLabel, radioOptions, radioLabel, buttonLabel, buttonVariant, buttonIcon, buttonOnClick }) => {
-    return (
-      <div className="form-container">
-        <Typography variant="h6" gutterBottom>
-          Answer Type
-        </Typography>
-        <AutocompleteComp options={autocompleteOptions} label={autocompleteLabel} />
-        <RadioOptions options={radioOptions} label={radioLabel} />
-        <Buttons 
-          label={buttonLabel}
-          variant={buttonVariant}
-          onClick={buttonOnClick}
-        />
-      </div>
-    );
-  };
+const Forms = ({ autocompleteOptions, autocompleteLabel, radioOptions, radioLabel, buttons }) => {
+  return (
+    <div className="form-container">
+      <Typography variant="h6" gutterBottom>
+        Answer Type
+      </Typography>
+      <AutocompleteComp options={autocompleteOptions} label={autocompleteLabel} />
+      <RadioOptions options={radioOptions} label={radioLabel} />
+      <Buttons buttons={buttons} />
+    </div>
+  );
+};
   
 export default Forms;
