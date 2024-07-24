@@ -1,0 +1,13 @@
+.autocomplete-container {
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .autocomplete-paper {
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1px solid #94A3B8; /* Adjust the margin as needed */
+  }
+  .autocomplete-option {
+    padding: 4px 8px; /* Adjust the padding to minimize the suggestion */
+    font-size: 0.875rem;
+  }
