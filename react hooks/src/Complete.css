@@ -11,3 +11,17 @@
     padding: 4px 8px; /* Adjust the padding to minimize the suggestion */
     font-size: 0.875rem;
   }
+
+  .textfield-custom-border  {
+    border: 2px solid #94A3B8;; /* Custom border color */
+    border-radius: 4px; /* Adjust the border radius if needed */
+  }
+
+  .autocomplete-container .MuiInputBase-root {
+    position: relative;
+  }
+  .autocomplete-container .MuiOutlinedInput-root {
+    border-radius: 8px 16px;
+  }
+  
+  
