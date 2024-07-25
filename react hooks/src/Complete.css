@@ -1,27 +1,21 @@
 .autocomplete-container {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px; 
+    
   }
   
   .autocomplete-paper {
     margin-top: 4px;
+    margin-bottom: 4px;
     border-radius: 8px;
-    border: 1px solid #94A3B8; /* Adjust the margin as needed */
+    border: 1px solid #94A3B8; 
   }
   .autocomplete-option {
-    padding: 4px 8px; /* Adjust the padding to minimize the suggestion */
+    padding: 4px 8px; 
     font-size: 0.875rem;
-  }
-
-  .textfield-custom-border  {
-    border: 2px solid #94A3B8;; /* Custom border color */
-    border-radius: 4px; /* Adjust the border radius if needed */
   }
 
   .autocomplete-container .MuiInputBase-root {
     position: relative;
   }
-  .autocomplete-container .MuiOutlinedInput-root {
-    border-radius: 8px 16px;
-  }
-  
+ 
   

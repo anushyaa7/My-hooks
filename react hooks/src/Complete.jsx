@@ -1,25 +1,22 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 import './Complete.css';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material';
 
 
 export default function Complete() {
-  const theme = useTheme(); // Get the current theme
-
   return (
+    <div className='complete'>
     <div className="autocomplete-container">
       <Autocomplete
         id="free-solo-demo"
         freeSolo
         options={top100Films.map((option) => option.title)}
-        renderInput={(params) => 
-          <div style={{ position: 'relative' }}>
+        renderInput={(params) => (
+          <div>   
             <TextField
               {...params}
-              placeholder="Placeholder" 
+              placeholder="Placeholder"  
               size="small" 
               margin="dense" 
               InputLabelProps={{
@@ -33,20 +30,22 @@ export default function Complete() {
               }}
               sx={{ 
                 minWidth: '200px',
-                borderRadius: '8px', 
+                borderRadius: '8px',
                 '& .MuiOutlinedInput-root': {
                   borderRadius: '8px', 
                 },
+                
               }} 
             />
-           
           </div>
-        }
+        )}
         classes={{
           paper: 'autocomplete-paper', 
           option: 'autocomplete-option', 
+          
         }}
       />
+    </div>
     </div>
   );
 }
